@@ -5,7 +5,7 @@ function greetCustomer() {
   for (let i = 0; i < pizzaToppings.length; i++) {
     toppingsList += pizzaToppings[i];
     if (i < pizzaToppings.length - 1) {
-      toppingsList += "&";
+      toppingsList += ", ";
     }
   }
   console.log(
@@ -15,10 +15,10 @@ function greetCustomer() {
 
 function getPizzaOrder(size, crust, ...toppings) {
   console.log(`One ${size} ${crust} pizza with ${toppings} coming up!`);
-  return size, crust, toppings;
+  return [size, crust, toppings];
 }
 
-function preparePizza(size, crust, toppings) {
+function preparePizza([size, crust, toppings]) {
   console.log("...Cooking pizza...");
   let pizzaObj = {
     size: size,
@@ -32,8 +32,12 @@ function servePizza(pizzaObj) {
     `Order up! Here's your ${pizzaObj.size}, ${pizzaObj.crust} pizza with ${pizzaObj.toppings} Enjoy!`
   );
 }
-
 greetCustomer(pizzaToppings);
-getPizzaOrder("large", "thin", "sausage", "mushrooms", "bacon");
-preparePizza(getPizzaOrder);
-servePizza(preparePizza);
+let customerOrder = getPizzaOrder(
+  "large",
+  "thin",
+  "sausage",
+  "mushrooms",
+  "bacon"
+);
+servePizza(preparePizza(customerOrder));
