@@ -1,0 +1,27 @@
+/*Include the Following CSS
+utilize the CSS Box Model for padding, margin, and border - done
+utilize a color scheme (max. 4 colors) - done
+1+ class selector - done
+1+ ID selector - done
+1+ complex selector - done */
+* {
+  border: 1px solid black;
+  margin: 0;
+  padding: 3px;
+}
+
+.main-container {
+  color:rgb(159, 6, 231);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#header-one {
+  color: rgb(75, 37, 132);
+}
+
+#horsey {
+  object-fit: scale-down;
+}
+a:visited {
+  color:crimson;
+}
