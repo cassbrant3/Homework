@@ -1,0 +1,61 @@
+html {
+  background-color: antiquewhite;
+}
+
+body {
+  text-align: center;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+img {
+  height: 100%;
+  max-width: 500px;
+}
+
+div {
+  border: 2px solid burlywood;
+  margin: 10px;
+}
+
+#introPic {
+  display: flex;
+align-items: flex-end;
+}
+
+#bio {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+#bio > li {
+  padding: 2px;
+  margin: auto;
+}
+
+#pro {
+  width: auto;
+}
+
+#achievements {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .bio {
+  float: left;
+    }
+  img {
+    width: 50%;
+    height: 50%;
+  }
+  #top {
+    max-width: 300%;
+  }
+  }
+
